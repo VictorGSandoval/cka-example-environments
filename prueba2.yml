@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deploy
+  name: deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deploy
+    spec:
+      containers:
+      - image: httpd:2.4.41-alpine
+        name: httpd
+        resources: {}
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+status: {}
