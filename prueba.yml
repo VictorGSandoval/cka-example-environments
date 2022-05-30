@@ -10,7 +10,7 @@ spec:
   schedulerName: kube-scheduler-none-existing
   containers:
   - image: nginx:1.16.1-alpine
-    name: pod
+    name: pod2
     resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
