@@ -6,7 +6,7 @@ metadata:
    app: do100-probes
 spec:
  rules:
-   - host: hello.example.com
+   - host: 34.123.225.114
      http:
        paths:
          - path: /
